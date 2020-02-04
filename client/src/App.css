@@ -1,0 +1,43 @@
+.itunesLogo{
+  height:100px;
+}
+
+.myButton:hover {
+  background-color:#5cbf2a;
+  /*transform: translateX(5.2px);*/
+  /* hover effect */
+}
+.myButton{
+  transition: 0.2s;
+  overflow: hidden;
+
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+body {
+  background-image: url("/background.jpg");
+  background-attachment: fixed;
+  flex:1;
+  resize:contain;
+  text-align: center;
+  align-self:stretch; 
+  text-decoration: none;
+}
+.album-container img:hover {
+  transform: translateY(10px);
+  overflow: hidden;
+  overflow-anchor: none;
+  text-decoration: none;
+}
+
+.album-container img {
+  transition: 0.1s;
+  text-decoration: none;
+}
+
+
+/* // "client": "cd client && yarn start", */
+/*  */
