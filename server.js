@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 //localhost:5000 
 
-//app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use(cors())
 app.use(helmet())
@@ -41,6 +41,10 @@ app.get('/search/:query', (req,res)=> {
 
 
 // catchall handler
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+
 // send back the react page
 //app.get('*', (req, res) => {
 //    res.sendFile(path.join(__dirname+'/client/build/index.html'));
